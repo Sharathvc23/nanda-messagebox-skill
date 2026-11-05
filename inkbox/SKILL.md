@@ -62,7 +62,7 @@ The NANDA entry is a personal identity named after the address: `urn:air:host39.
 3. Create the entry:
    ```
    POST NANDA/api/v1/orgs     Authorization: Bearer <token>
-   {"org_id": "inkbox-<agent_handle>", "display_name": "<person's name>", "hosting_path": "personal", "contact_email": "<email_address>", "registry_url": "https://inkbox.ai/a2a/<agent_handle>/card", "identifier": "urn:air:host39.org:personal:<email_address>", "media_type": "application/mcp-server-card+json", "description": "<what the agent offers, or 'Personal agent on Inkbox'>"}
+   {"org_id": "inkbox-<agent_handle>", "display_name": "<person's name>", "hosting_path": "personal", "contact_email": "<email_address>", "registry_url": "https://inkbox.ai/a2a/<agent_handle>/card", "identifier": "urn:air:host39.org:personal:<email_address>", "media_type": "application/a2a-agent-card+json", "description": "<what the agent offers, or 'Personal agent on Inkbox'>"}
    ```
    `201` returns the record with `status: "pending"`. `409` means the entry already exists; continue.
 4. NANDA emails a second message, "Verify your NANDA Index registration", to the agent's address. Read it the same way and confirm with its token:
